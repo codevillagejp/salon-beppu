@@ -1,0 +1,67 @@
+// break point
+$bp-xl: 1282px;
+$bp-mdl: 1077px;
+$bp-md: 953px;
+$bp-tb: 860px;
+$bp-sm: 768px;
+$bp-xs: 640px;
+$bp-xxs: 475px;
+
+// setting
+@mixin breakPoint($media-width) {
+    @if $media-width==xl {
+        @media only screen and (max-width: $bp-xl) {
+        @content;
+        }
+    }
+
+    @else if $media-width==mdl {
+        @media only screen and (max-width: $bp-mdl) {
+        @content;
+        }
+    }
+
+    @else if $media-width==md {
+        @media only screen and (max-width: $bp-md) {
+        @content;
+        }
+    }
+
+    @else if $media-width==tb {
+        @media only screen and (max-width: $bp-tb) {
+        @content;
+        }
+    }
+
+    @else if $media-width==sm {
+        @media only screen and (max-width: $bp-sm) {
+        @content;
+        }
+    }
+
+    @else if $media-width==xs {
+        @media only screen and (max-width: $bp-xs) {
+        @content;
+        }
+    }
+
+    @else if $media-width==xxs {
+        @media only screen and (max-width: $bp-xxs) {
+        @content;
+        }
+    }
+
+    @else {
+        @media only screen and (max-width: $media-width) {
+        @content;
+        }
+    }
+}
+
+/*== color ====================*/
+$txt_gray: #707070;
+$txt_secondGray: #00000038;
+$txt_black: #000000;
+$txt_white: #FFFFFF;
+$background_lightGray: #A193861F;
+$background_brown: #A1938689;
