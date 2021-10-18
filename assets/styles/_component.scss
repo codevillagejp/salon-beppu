@@ -1,3 +1,18 @@
+/* responsive */
+.pc-only {
+    display: block;
+    @include breakPoint(tb) {
+        display: none;
+    }
+}
+
+.sp-only {
+    display: none;
+    @include breakPoint(tb) {
+        display: block;
+    }
+}
+
 .section-title {
     position: relative;
     color: $txt_gray;
