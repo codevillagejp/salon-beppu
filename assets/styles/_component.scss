@@ -23,6 +23,10 @@
     opacity: 1;
     font-family: 'Roboto', Regular;
     margin-bottom: 10px;
+    @include breakPoint(tb) {
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
     &::after {
         position: absolute;
         content: '';

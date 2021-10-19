@@ -170,17 +170,21 @@ a {
   padding-bottom: 70px;
   padding-left: 4vw;
   padding-right: 4vw; }
+  @media only screen and (max-width: 910px) {
+    .container {
+      padding-top: 60px;
+      padding-bottom: 63px; } }
 
 /* responsive */
 .pc-only {
   display: block; }
-  @media only screen and (max-width: 860px) {
+  @media only screen and (max-width: 910px) {
     .pc-only {
       display: none; } }
 
 .sp-only {
   display: none; }
-  @media only screen and (max-width: 860px) {
+  @media only screen and (max-width: 910px) {
     .sp-only {
       display: block; } }
 
@@ -194,6 +198,10 @@ a {
   opacity: 1;
   font-family: 'Roboto', Regular;
   margin-bottom: 10px; }
+  @media only screen and (max-width: 910px) {
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 50px; } }
   .section-title::after {
     position: absolute;
     content: '';
@@ -206,21 +214,31 @@ a {
 header {
   position: absolute;
   z-index: 1;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   padding: 68px 77px; }
-  @media only screen and (max-width: 860px) {
+  @media only screen and (max-width: 910px) {
     header {
       position: fixed;
-      padding: 25px 20px; } }
+      padding: 25px 20px;
+      background-color: #FFFFFF;
+      border: 1px solid #EDEDED; } }
   header .header-inner {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 910px) {
+      header .header-inner {
+        justify-content: space-between; } }
     header .header-inner .header-title a {
       letter-spacing: 3.8px;
       text-transform: uppercase;
       opacity: 1;
       font-size: 3.8rem;
       line-height: 1.2; }
+      @media only screen and (max-width: 910px) {
+        header .header-inner .header-title a {
+          font-size: 2.2rem;
+          letter-spacing: 2.2px; } }
     header .header-inner .header-menu {
       margin-left: 20px; }
       header .header-inner .header-menu ul {
@@ -245,54 +263,129 @@ header {
               -webkit-transition: all .3s ease; }
             header .header-inner .header-menu ul li a:hover::after {
               width: 100%; }
+    header .header-inner .header-hamburger #menu-btn-check {
+      display: none; }
+    header .header-inner .header-hamburger #menu-btn-check:checked ~ .menu-btn span {
+      background-color: rgba(255, 255, 255, 0);
+      /*メニューオープン時は真ん中の線を透明にする*/
+      transition: all 300ms 0s ease; }
+    header .header-inner .header-hamburger #menu-btn-check:checked ~ .menu-btn span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+      transition: all 300ms 0s ease; }
+    header .header-inner .header-hamburger #menu-btn-check:checked ~ .menu-btn span::after {
+      top: 0;
+      transform: rotate(-45deg);
+      transition: all 300ms 0s ease;
+      width: 16px; }
+    header .header-inner .header-hamburger .menu-btn span,
+    header .header-inner .header-hamburger .menu-btn span:before,
+    header .header-inner .header-hamburger .menu-btn span:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 16px;
+      border-radius: 3px;
+      background-color: #3B4043;
+      position: absolute;
+      transition: all 300ms 0s ease; }
+    header .header-inner .header-hamburger .menu-btn span {
+      right: 20px; }
+    header .header-inner .header-hamburger .menu-btn span:before {
+      bottom: 5px; }
+    header .header-inner .header-hamburger .menu-btn span:after {
+      top: 5px;
+      width: 9px; }
 
 #firstView {
   display: flex; }
+  @media only screen and (max-width: 910px) {
+    #firstView {
+      padding-top: 76px;
+      position: relative; } }
   #firstView .firstView-catchCopy {
     width: 46%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 910px) {
+      #firstView .firstView-catchCopy {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: calc(50% - 76px);
+        color: #FFFFFF;
+        text-shadow: 0px 3px 16px #000000; } }
     #firstView .firstView-catchCopy .firstView-textWrap {
       font-size: 3.8rem;
       opacity: 1;
       letter-spacing: 3.8px;
-      text-align: center; }
+      text-align: center;
+      display: flex;
+      flex-direction: column; }
+      @media only screen and (max-width: 910px) {
+        #firstView .firstView-catchCopy .firstView-textWrap {
+          flex-direction: column-reverse; } }
       #firstView .firstView-catchCopy .firstView-textWrap__top {
         line-height: 1.7;
         font-family: 'ヒラギノ明朝 Pro', W3;
         margin-bottom: 48px; }
+        @media only screen and (max-width: 910px) {
+          #firstView .firstView-catchCopy .firstView-textWrap__top {
+            font-size: 6vw; } }
       #firstView .firstView-catchCopy .firstView-textWrap__bottom {
         line-height: 4.5;
         font-family: 'Zapfino', Regular; }
+        @media only screen and (max-width: 910px) {
+          #firstView .firstView-catchCopy .firstView-textWrap__bottom {
+            font-size: 7vw; } }
   #firstView .firstView-ImgWrap {
     width: 54%;
     height: auto; }
+    @media only screen and (max-width: 910px) {
+      #firstView .firstView-ImgWrap {
+        width: 100%;
+        height: auto; } }
     #firstView .firstView-ImgWrap img {
-      height: 100%;
-      width: 100%; }
+      width: 100%;
+      height: auto; }
 
 #concept {
   display: flex;
   justify-content: center;
   background: linear-gradient(180deg, #A193861F 0%, #A193861F 42%, #A1938689 42%, #A1938689 100%); }
+  @media only screen and (max-width: 910px) {
+    #concept {
+      background: linear-gradient(180deg, #A193861F 0%, #A193861F 25%, #A1938689 25%, #A1938689 100%); } }
   #concept .concept-imgWrap {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 70px; }
+    @media only screen and (max-width: 910px) {
+      #concept .concept-imgWrap {
+        margin-bottom: 50px; } }
     #concept .concept-imgWrap__top {
       width: 62%;
       height: auto; }
+      @media only screen and (max-width: 910px) {
+        #concept .concept-imgWrap__top {
+          width: 49.5%; } }
     #concept .concept-imgWrap__bottom {
       width: 37%;
       height: auto; }
+      @media only screen and (max-width: 910px) {
+        #concept .concept-imgWrap__bottom {
+          width: 49.5%; } }
   #concept .concept-textWrap {
     display: flex;
     max-width: 953px;
     margin: 0 auto;
     color: #FFFFFF; }
+    @media only screen and (max-width: 910px) {
+      #concept .concept-textWrap {
+        flex-direction: column; } }
     #concept .concept-textWrap__title {
       font-size: 4rem;
       white-space: nowrap;
@@ -301,6 +394,13 @@ header {
       font-family: 'ヒラギノ明朝 Pro', 'W3';
       margin-top: 23px;
       margin-right: 5%; }
+      @media only screen and (max-width: 910px) {
+        #concept .concept-textWrap__title {
+          margin: 0 0 18px 0;
+          font-size: 1.8rem;
+          letter-spacing: 7.2px;
+          line-height: 1.8;
+          text-align: center; } }
     #concept .concept-textWrap__content {
       font-size: 1.6rem;
       line-height: 1.6;

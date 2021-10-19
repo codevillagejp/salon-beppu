@@ -18,7 +18,7 @@
             <div class="header-title">
                 <a href="index.html">SALON BEPPU</a>
             </div>
-            <div class="header-menu">
+            <div class="header-menu pc-only">
                 <ul>
                     <li>
                         <a href="#menu">MENU</a>
@@ -34,6 +34,12 @@
                     </li>
                 </ul>
             </div>
+            <div class="header-hamburger sp-only">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn">
+                    <span></span>
+                </label>
+            </div>
         </div>
     </header>
     <section id='firstView'>
@@ -48,7 +54,8 @@
             </div>
         </div>
         <div class="firstView-ImgWrap">
-            <img src="assets/images/firstView_pc.png" alt="firstViewの画像">
+            <img class="pc-only" src="assets/images/firstView_pc.png" alt="firstViewのpc画像">
+            <img class="sp-only" src="assets/images/firstView_sp.png" alt="firstViewのsp画像">
         </div>
     </section>
     <section id='concept'>
@@ -57,8 +64,10 @@
                 CONCEPT
             </div>
             <div class="concept-imgWrap">
-                <img class="concept-imgWrap__top" src="assets/images/concept-1_pc.png" alt="conceptの画像1">
-                <img class="concept-imgWrap__bottom" src="assets/images/concept-2_pc.png" alt="conceptの画像2">
+                <img class="concept-imgWrap__top pc-only" src="assets/images/concept-1_pc.png" alt="conceptのpc画像1">
+                <img class="concept-imgWrap__top sp-only" src="assets/images/concept-1_sp.png" alt="conceptのsp画像1">
+                <img class="concept-imgWrap__bottom pc-only" src="assets/images/concept-2_pc.png" alt="conceptのpc画像2">
+                <img class="concept-imgWrap__bottom sp-only" src="assets/images/concept-2_sp.png" alt="conceptのsp画像2">
             </div>
             <div class="concept-textWrap">
                 <p class="concept-textWrap__title">髪は、大事です。</p>
@@ -75,19 +84,22 @@
             </div>
             <div class="menu-items">
                 <div class="menu-item">
-                    <img src="assets/images/menu-1_pc.png" alt="デザインカット画像" class="menu-item__img">
+                    <img class="pc-only menu-item__img" src="assets/images/menu-1_pc.png" alt="デザインカット画像">
+                    <img class="sp-only menu-item__img" src="assets/images/menu-1_sp.png" alt="デザインカット画像">
                     <p class="menu-item__title">Design Cut</p>
                     <p class="menu-item__text">テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。</p>
                     <p class="menu-item__price">¥9,800(税抜)</p>
                 </div>
                 <div class="menu-item">
-                    <img src="assets/images/menu-2_pc.png" alt="デザインパーマ画像" class="menu-item__img">
+                    <img class="pc-only menu-item__img" src="assets/images/menu-2_pc.png" alt="デザインパーマ画像">
+                    <img class="sp-only menu-item__img" src="assets/images/menu-2_sp.png" alt="デザインパーマ画像">
                     <p class="menu-item__title">Design Perm</p>
                     <p class="menu-item__text">テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。</p>
                     <p class="menu-item__price">¥19,800~(税抜)</p>
                 </div>
                 <div class="menu-item">
-                    <img src="assets/images/menu-3_pc.png" alt="メイクアップ画像" class="menu-item__img">
+                    <img class="pc-only menu-item__img" src="assets/images/menu-3_pc.png" alt="メイクアップ画像">
+                    <img class="sp-only menu-item__img" src="assets/images/menu-3_sp.png" alt="メイクアップ画像">
                     <p class="menu-item__title">Make Up</p>
                     <p class="menu-item__text">テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。テキストテキストテキスト。</p>
                     <p class="menu-item__price">¥8,800~(税抜)</p>
