@@ -35,5 +35,8 @@
         width: 100px;
         height: 1px;
         border-top: 1px solid $txt_gray;
+        @include breakPoint(tb) {
+            width: 44px;
+        }
     }
 }
